@@ -36,9 +36,9 @@ public class QuizActivity extends Activity {
         });
     }
 
-    /*@Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu){
        getMenuInflater().inflate(R.menu.activity_quiz, menu);
        return true;
-    }*/
+    }
 }
