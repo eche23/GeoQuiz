@@ -1,6 +1,7 @@
 package eche2312.gmail.com.geoquiz;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -13,6 +14,7 @@ public class QuizActivity extends Activity {
 
     private Button mTrueButton;
     private Button mFalseButton;
+    private Button mCheatButton;
     protected final String TAG = this.getClass().getSimpleName();
     private static final String KEY_INDEX = "index";
     private int mCurrentIndex;
@@ -25,6 +27,7 @@ public class QuizActivity extends Activity {
 
         mTrueButton = (Button)findViewById(R.id.true_button);
         mFalseButton = (Button)findViewById(R.id.false_button);
+        mCheatButton = (Button)findViewById(R.id.cheat_button) ;
 
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +40,17 @@ public class QuizActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(QuizActivity.this, R.string.correct_toast, Toast.LENGTH_LONG).show();
+            }
+        });
+
+        mCheatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent i = new Intent(QuizActivity.this, CheatActivity.class);
+                //TODO Corregir error
+                /*boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
+                Intent i = CheatActivity.newInent(QuizActivity.this, answerIsTrue);
+                startActivity(i);*/
             }
         });
 
